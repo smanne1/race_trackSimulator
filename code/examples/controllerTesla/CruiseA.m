@@ -12,7 +12,7 @@ end
 Theta = 0
 while (Theta <= pi)
     Theta = Theta + refVelocity/(bRef*r);
-    refTheta(i) = refTheta(i-1) - refVelocity/(20*r);
+    refTheta(i) = refTheta(i-1) - refVelocity/(bRef*r);
     i = i+1;
 end
 
@@ -26,7 +26,7 @@ end
 Theta = 0;
 while (Theta <= pi)
     Theta = Theta + refVelocity/(bRef*r);
-    refTheta(i) = refTheta(i-1) - refVelocity/(20*r);
+    refTheta(i) = refTheta(i-1) - refVelocity/(bRef*r);
     i = i+1;
 end
 

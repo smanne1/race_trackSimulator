@@ -8,9 +8,9 @@ d = 0.0107; Veq = 2, Weq = 0; L = 0.28; AR = L/0.25; Iw = 1.67e-06; dw = 0.25; m
 
 
 %%
-refVelocity = 1; % in m/s
+refVelocity = 5; % in m/s
 refTheta = 0; % in radians
-bRef = 2; cBW = 1/bRef; % BW of the reference signal (Hz)
+bRef = 10; cBW = 1/bRef; % BW of the reference signal (Hz)
 L = 0.25; % distance between the wheels dw
 R = 0.042;
 x = 500; y = 500; r = 10; l = 10 % center of the track, radius of the track, length of the straight path
