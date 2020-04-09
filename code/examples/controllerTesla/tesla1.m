@@ -8,7 +8,7 @@ d = 0.0107; Veq = 2, Weq = 0; L = 0.28; AR = L/0.25; Iw = 1.67e-06; dw = 0.25; m
 
 
 %%
-refVelocity = 5; % in m/s
+refVelocity = 4; % in m/s
 refTheta = 0; % in radians
 bRef = 10; cBW = 1/bRef; % BW of the reference signal (Hz)
 L = 0.25; % distance between the wheels dw

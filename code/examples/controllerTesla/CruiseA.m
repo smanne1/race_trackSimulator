@@ -17,6 +17,8 @@ while (Theta <= pi)
 end
 
 D = 0;
+
+
 while (D <= l)
     D = D + (refVelocity)/bRef;
     refTheta(i) = -pi;

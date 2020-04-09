@@ -10,5 +10,5 @@ Ts = 1/100; D11 = c2d(control,Ts,'zoh');
 Controller = [D11 0; 0 D11]; % replace this with the discrete controller
 %Controller = ss(Controller);
 end
-end
 
+end
