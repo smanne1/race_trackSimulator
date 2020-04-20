@@ -1,7 +1,7 @@
 function [Plant] = Plantsdv(d, Veq, Weq, dw, Iw, I, L, md,R)
 
 
-% Plant model from (e_r + e_l), (e_r-e_l) to V, W
+% Plant model from (e_r + e_l), (e_l-e_r) to V, W
 
 
  dw = dw;

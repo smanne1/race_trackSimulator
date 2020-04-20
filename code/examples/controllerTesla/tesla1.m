@@ -3,8 +3,9 @@ close all
 load('/home/shravan/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Simulation Toolbox/code/examples/controllerTesla/slprj/sim/varcache/mrsDiffDriveModel/varInfo.mat')
 load('/home/shravan/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Simulation Toolbox/code/examples/controllerTesla/slprj/sim/varcache/mrsDiffDriveModel/checksumOfCache.mat')
 %% Nominal Plant 
+%global d Veq Weq L AR Iw dw md R sampleTime;
 d = 0.0107; Veq = 2, Weq = 0; L = 0.28; AR = L/0.25; Iw = 1.67e-06; dw = 0.25; md = 0;
-
+d = 0;
 
 
 %%
