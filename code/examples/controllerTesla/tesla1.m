@@ -7,7 +7,6 @@ load('/home/shravan/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Simulatio
 d = 0.0107; Veq = 2, Weq = 0; L = 0.28; AR = L/0.25; Iw = 1.67e-06; dw = 0.25; md = 0;
 d = 0;
 
-
 %%
 refVelocity = 3; % in m/s
 refTheta = 0; % in radians
