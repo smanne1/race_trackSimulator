@@ -11,12 +11,12 @@ d = 0;
 refVelocity = 3; % in m/s
 refTheta = 0; % in radians
 bRef = 10; cBW = 1/bRef; % BW of the reference signal (Hz)
-L = 0.25; % distance between the wheels dw
+L = 0.3536; % distance between the wheels dw
 R = 0.042;% radius of the motor wheel 
 x = 500; y = 500; r = 10; l = 10; % center of the track, radius of the track, length of the straight path
 C1 = x; C2 = y + r; % starting point
 sampleTime = 0.01; %1/100     limited by arduino
-I = I_calculation(d,Iw,L,md);
+I = I_ARcalculation(d,Iw,L);%I_calculation(d,Iw,L,md);
 Plant = Plantww(d,Veq,Weq,dw,Iw,I,L,md,R);  
 Controller = ControllerA(1,sampleTime);
 Waypoint = WaypointA(x,y,l,r);
