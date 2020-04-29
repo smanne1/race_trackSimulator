@@ -5,7 +5,10 @@ load('/home/shravan/Documents/MATLAB/Add-Ons/Toolboxes/Mobile Robotics Simulatio
 %% Nominal Plant 
 %global d Veq Weq L AR Iw dw md R sampleTime;
 d = 0.0107; Veq = 2, Weq = 0; L = 0.28; AR = L/0.25; Iw = 1.67e-06; dw = 0.25; md = 0;
-d = 0;
+m = 3.4;  mc = 2.76 + md; Ad = m + 2*Iw/(R*R); Bd = I + dw*dw*Iw/(2*R*R);
+
+% Left Motor Actuator Dynamics - voltage to motor torque 
+Kt = 0.0046; Kg = 50; Kb = Kt; Beta = 2.29e-06; La =1.729e-03; Ra = 5.51;
 
 %%
 refVelocity = 3; % in m/s
@@ -16,7 +19,7 @@ R = 0.042;% radius of the motor wheel
 x = 500; y = 500; r = 10; l = 10; % center of the track, radius of the track, length of the straight path
 C1 = x; C2 = y + r; % starting point
 sampleTime = 0.01; %1/100     limited by arduino
-I = I_ARcalculation(d,Iw,L);%I_calculation(d,Iw,L,md);
+I = I_calculation(d,Iw,L,md);
 Plant = Plantww(d,Veq,Weq,dw,Iw,I,L,md,R);  
 Controller = ControllerA(1,sampleTime);
 Waypoint = WaypointA(x,y,l,r);
