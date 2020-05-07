@@ -6,7 +6,7 @@ mpc1.PredictionHorizon = 25;
 mpc1.ControlHorizon = 4;
 %% specify nominal values for inputs and outputs
 mpc1.Model.Nominal.U = [0;0];
-mpc1.Model.Nominal.Y = [0;0];
+mpc1.Model.Nominal.Y = [0;0;0];
 %% specify weights
 mpc1.Weights.MV = [0 0];
 mpc1.Weights.MVRate = [0.1 0.1];

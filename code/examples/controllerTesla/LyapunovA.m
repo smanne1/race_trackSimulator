@@ -57,7 +57,7 @@ end
 Lyapunov(:,1) = refX;
 Lyapunov(:,2) = refY;
 Lyapunov(:,3) = refTheta;
-Lyapunov(:,4) = (refX./refX)*refVelocity;
-Lyapunov(:,5) = refW;
+%Lyapunov(:,4) = (refX./refX)*refVelocity;
+%Lyapunov(:,5) = refW;
 end
 
