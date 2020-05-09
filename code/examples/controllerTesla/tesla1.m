@@ -33,4 +33,4 @@ Lyapunov = LyapunovA(refVelocity,bRef,l,r,C1,C2);
 
 %%
 
-MPC_object
+MPC1
