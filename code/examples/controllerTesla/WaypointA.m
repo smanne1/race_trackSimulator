@@ -3,8 +3,8 @@ function [Waypoint] = WaypointA(x,y,l,r)
 %   Detailed explanation goes here
 P = 100 % even number only
 Waypoint(1,:) = [x y+r];
-for (i = 1:((P/2)-1))
-    Waypoint(i+1,:)= Waypoint(1,:) + i*(0.5*l/((P/2)-1))*[1 0];
+for (i = 1:((P/2)))
+    Waypoint(i+1,:)= Waypoint(1,:) + i*(0.5*l/((P/2)))*[1 0];
 end
 
 for (i = 1:P)

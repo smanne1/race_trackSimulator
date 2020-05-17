@@ -27,8 +27,8 @@ A = m + 2*Iw/(R*R); B = I + dw*dw*Iw/(2*R*R);
 
 % ULTIMATE - CORRECT representation of Plant using State Space form derived
 % on Aug 24 th, 2020 
-As = [-2*Beta*Kg*Kg/(A*R*R) 2*mc*d*Weq/A   (Kt*Kg/R*A)  (Kt*Kg/(R*A));
-     -mc*d*Weq/B  (-mc*d*Veq/B)-(Beta*dw*dw*Kg*Kg/(2*R*R*B)) dw*Kt*Kg/(2*R*B) -dw*Kt*Kg/(2*B*R) ;
+As = [-2*Beta*Kg*Kg/(A*R*R)  2*mc*d*Weq/A   (Kt*Kg/(R*A))  (Kt*Kg/(A*R));
+      -mc*d*Weq/B  (-mc*d*Veq/B)-(Beta*dw*dw*Kg*Kg/(2*R*R*B)) dw*Kt*Kg/(2*R*B) -dw*Kt*Kg/(2*B*R) ;
      -Kb*Kg/(La*R)   -Kb*Kg*dw/(2*La*R)  -Ra/La      0 ;
      -Kb*Kg/(La*R)    Kb*Kg*dw/(2*La*R)    0       -Ra/La ];
 Bs = [0 0; 0 0; 1/La 0; 0 1/La]; Cs = [1 0 0 0; 0 1 0 0]; Ds = [0 0; 0 0];
