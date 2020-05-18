@@ -24,7 +24,7 @@ I = 0.4250;
 Ad = m + 2*Iw/(R*R); Bd = I + dw*dw*Iw/(2*R*R);
 Plant = Plantww(d,Veq,Weq,dw,Iw,I,L,md,R);  
 Plant_pos = Plantww_position(d,Veq,Weq,dw,Iw,I,L,md,R);
-Plant_discPos = Plant_discPosition();
+Plant_discPos = Plant_discPosition2();
 Controller = [PI1 0; 0 PI1]; %ControllerA(1,sampleTime);
 Waypoint = WaypointA(x,y,l,r);
 Cruise = CruiseA(refVelocity,bRef,l,r);
@@ -34,6 +34,7 @@ Lyapunov = LyapunovA(refVelocity,bRef,l,r,C1,C2);
 
 %%
 
-MPC_object_discPos
+MPC_object_discPos2
+
 
 

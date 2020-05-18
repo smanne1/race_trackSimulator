@@ -1,4 +1,4 @@
-function [Plant] = Plant_discPosition()
+function [Plant] = Plant_discPosition1()
 %PLANTWW_POSITION Summary of this function goes here
 %   Detailed explanation goes here
 thetaeq = 0;
