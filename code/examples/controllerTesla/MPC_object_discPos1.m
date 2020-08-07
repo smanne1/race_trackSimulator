@@ -1,9 +1,9 @@
 %% create MPC controller object with sample time
 mpc1 = mpc(Plant_discPos, 0.01);
 %% specify prediction horizon
-mpc1.PredictionHorizon = 30;
+mpc1.PredictionHorizon = 55;
 %% specify control horizon
-mpc1.ControlHorizon = 5;
+mpc1.ControlHorizon = 1;
 %% specify nominal values for inputs and outputs
 mpc1.Model.Nominal.U = [0;0];
 mpc1.Model.Nominal.Y = [0;0;0];
@@ -23,8 +23,8 @@ mpc1.OV(3).Max = 10;
 beta = 0.36788;
 %% specify weights
 mpc1.Weights.MV = [0 0]*beta;
-mpc1.Weights.MVRate = [0.1 1]/beta;
-mpc1.Weights.OV = [2 8 0.5]*beta;
+mpc1.Weights.MVRate = [1 10];
+mpc1.Weights.OV = [10 16 1];
 mpc1.Weights.ECR = 100000;
 %% specify overall adjustment factor applied to estimation model gains
 alpha = 1.0471;

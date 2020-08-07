@@ -50,11 +50,11 @@ function pololuMotorPlotGenAAMv2
     
 %Plot part of the functions    
     subplot(2,2,1)
-    [hAx, hLine1, hLine2] = plotyy([0 StallTorque], [NoLoadSpeed 0], [0 StallTorque], [NoLoadCurrent StallCurrent]); %This is the TorqueLoad vs. Motor Speed graph
+    [hAx, hLine1, hLine2] = plotyy([0 StallTorque], [NoLoadSpeed 0]*2*pi*0.039/60, [0 StallTorque], [NoLoadCurrent StallCurrent]); %This is the TorqueLoad vs. Motor Speed graph
     
     title('Torque vs. Speed & Torque vs. Current');
     xlabel('Torque (oz-in)');
-    ylabel(hAx(1), 'Speed-RPM');
+    ylabel(hAx(1), 'Speed0-m/s');
     ylabel(hAx(2), 'Current-mA');
     
     %This is the plot of the Output Mechanical power in watts vs. Input

@@ -213,7 +213,10 @@ classdef MultiRobotEnv < matlab.System
             % Initialize waypoints
             if obj.hasWaypoints
                 obj.WaypointHandle = plot(obj.ax,0,0, ...
-                    'rx','MarkerSize',10,'LineWidth',2);
+                    'rx','MarkerSize',2,'LineWidth',2);
+                %axis 'auto xy'
+                xlim([490 510 ])
+                ylim([490 510])
             end
             
             % Initialize lidar lines
