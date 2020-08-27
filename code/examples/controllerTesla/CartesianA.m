@@ -21,7 +21,7 @@ while (Theta <= pi)
 end
 D1 = D;
 D = 0;
-while (D <= l/2)
+while (D <= l)
     D = D + (refVelocity)/bRef;
     refX(i) = C1 + D1 - D; 
     refY(i) = C2 - r + r*cos(Theta);
@@ -35,7 +35,7 @@ Theta = 0;
 while (Theta <= pi)
     Theta = Theta + refVelocity/(bRef*r);
     refTheta(i) = refTheta(i-1) - refVelocity/(bRef*r);
-   refX(i) = C1 + D1 - D - r*sin(Theta);
+   refX(i) = C1 - D1 - r*sin(Theta);
   refY(i) = C2 + Theta1 + (r-r*cos(Theta));
     i = i+1;
 end
@@ -44,7 +44,7 @@ D2 = D;
 D = 0;
 while (D <= l/2)
     D = D + (refVelocity)/bRef;
-    refX(i) = C1 + D1 - D2 + D; 
+    refX(i) = C1 - D1 + D; 
     refY(i) = C2 + Theta1 + r - r*cos(Theta);
     refTheta(i) = -2*pi;
     i = i+1;

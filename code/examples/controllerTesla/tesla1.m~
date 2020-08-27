@@ -15,7 +15,7 @@ refVelocity = 1.0; % in m/s
 refTheta = 0; % in radians
 bRef = 100; cBW = 1/bRef; % BW of the reference signal (Hz)
 R = 0.039;% radius of the motor wheel 
-x = 0; y = 0; r = 0.75; l = 2; % r = 10,8,6,5,4,3 center of the track, radius of the track, length of the straight path
+x = 500; y = 500; r = 1.; l = 3; % r = 10,8,6,5,4,3 center of the track, radius of the track, length of the straight path
 C1 = x; C2 = y + r; % starting point
 sampleTime = 0.01; %1/100 limited by arduino
 %I = I_calculation(d,Iw,L,md); 
